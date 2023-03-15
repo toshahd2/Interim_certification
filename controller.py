@@ -3,6 +3,7 @@ from readModule import *
 from printModule import *
 from searchIdModule import *
 from searchDateModule import *
+from deleteModule import *
 
 
 def start():
@@ -58,6 +59,7 @@ def start():
             data = read_data()
             item = search_data(idRequest, data)
             if item != None:
+                delete_data(idRequest)
                 print("Заметка удалена.")
             else:
                 print("ID не найден.")
