@@ -4,6 +4,7 @@ from printModule import *
 from searchIdModule import *
 from searchDateModule import *
 from deleteModule import *
+from editModule import *
 
 
 def start():
@@ -50,6 +51,7 @@ def start():
             item = search_data(idRequest, data)
             if item != None:
                 print_data(item, True)
+                push_edited_data(idRequest)
                 print("Заметка сохранена.")
             else:
                 print("ID не найден.")
